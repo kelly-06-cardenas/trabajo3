@@ -1,0 +1,25 @@
+{
+  "name": "version-del-proyecto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "memorystore": "^1.6.6",
+    "mongoose": "^5.12.9",
+    "parse": "^3.1.0",
+    "yargs": "^16.2.0"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

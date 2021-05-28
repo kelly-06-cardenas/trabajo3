@@ -1,0 +1,121 @@
+{{>header}}
+
+{{{mensaje}}}
+
+<div  class="container" >
+
+
+<h1>Completar el formulario</h1>
+
+<form class="row g-3" action="/inscribir" method="post">
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">Nombre Completo</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" required name="nombreEst">
+    <div class="valid-feedback">
+
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationServer05" class="form-label">Numero identificacion</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required name="nuiden">
+    <div id="validationServer05Feedback" class="invalid-feedback">
+    </div>
+  </div>
+  
+  
+  <div class="col-md-4">
+    <label for="validationServerUsername" class="form-label">Correo</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+      <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required name="correo">
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Escribe un correo valido
+      </div>
+    </div>
+  </div>
+  
+  <!--<div class="col-md-3">
+    <label for="validationServer05" class="form-label">ID curso</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required name="IDcurso">
+    <div id="validationServer05Feedback" class="invalid-feedback">
+    </div>
+  </div>-->
+  <!--<div class="col-md-3">
+    <label for="validationServer05" class="form-label">Curso</label>
+   <select name="IDcurso">
+     {{#each cursosDIS}}
+       <option value="{{this._id}}">
+         {{this.nombre}}
+       </option>
+
+     {{/each}}
+   </select>
+    <div id="validationServer05Feedback" class="invalid-feedback">
+    </div>
+  </div>-->
+
+  <div class="col-md-3">
+  <label for="inputAddress2" class="form-label">cursos disponibles</label>
+  <select type="text" class="form-control is-valid"  name="IDcurso"  >
+    {{#each cursosDIS}}
+    <option value="{{this._id}}">
+         {{this.nombre}}
+
+       </option>
+       {{/each}}
+
+  </select>
+  <div id="inputAddress2" class="invalid-feedback">
+    </div>
+
+  </div>
+
+
+  <div class="col-md-3">
+    <label for="validationServer05" class="form-label">Telefono</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required name="tel">
+    <div id="validationServer05Feedback" class="invalid-feedback">
+    </div>
+  </div>
+  
+
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Usuario</label>
+    <input type="text" class="form-control is-valid"  required name="usuario">
+    <div class="valid-feedback">
+    
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Contraseña</label>
+    <input type="password" class="form-control is-valid"  required name="contrasena">
+    <div class="valid-feedback">
+    
+    </div>
+  </div>
+
+  
+
+
+
+
+
+ <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Acepto terminos y condiciones.
+      </label>
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
+       Aceptar para finalizar.
+     </div>
+   </div>
+  </div>
+  <br>
+  <div class="col-12">
+    <button class="btn btn-success" type="submit">Enviar</button>
+  </div>
+</form>
+<img src="pie.png" width="100%" >
+{{>footer}}

@@ -1,0 +1,44 @@
+{{>header}}
+<div  class="container" >
+
+{{{mensaje}}}
+
+<form action="/registrar" method="post">
+
+  <h1> Crear nuevo curso</h1>
+
+  
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">ID del curso</label>
+    <input type="text" class="form-control" id="ID" name="ID">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Nombre del curso</label>
+    <input type="text" class="form-control" id="NombreCurso" name="NombreCurso">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Valor</label>
+    <input type="text" class="form-control" id="valor" name="valor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label">Duracion</label>
+    <input type="text" class="form-control" id="Duracion" name="Duracion">
+  </div>
+  <br>
+  <div class="col-md-6">
+  <label for="inputAddress2" class="form-label">Modalidad</label>
+  <select class="form-control" name="modalidad" >
+    <option value="virtual" >virtual </option>
+    <option value="presencial" >presencial </option>
+
+  </select>
+  </div>
+  <br>
+  <div class="col-12">
+    <button type="submit" class="btn btn-success">Crear</button>
+  </div>
+</form>
+<img src="pie.png" width="100%" >
+
+
+{{>footer}}
